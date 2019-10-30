@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
+
+    <at.grabner.circleprogress.CircleProgressView
+        android:id="@+id/progressBar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        CircleProgressView:cpv_textColor="@color/colorAccent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp"
+        CircleProgressView:cpv_barWidth="35dp"
+        CircleProgressView:cpv_rimWidth="35dp" />
+
+    <TextView
+        android:id="@+id/heartMeasure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif-monospace"
+        android:padding="10dp"
+        android:text="@string/HeartRateMessage"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

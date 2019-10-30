@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FitHeart</string>
+    <string name="heartrate">75 bpm </string>
+    <string name="HeartRateMessage">Your heart is beating normally</string>
+
+</resources>
