@@ -12,7 +12,7 @@ import com.example.regischarles.fitheart.R;
 
 public class RecyclerAdapterHeart extends RecyclerView.Adapter<RecyclerAdapterHeart.ViewHolder> {
 private String[] arrayList={"80 bpm","75 bpm","65 bpm","120 bpm","55 bpm","120 bpm"};
-private String[] message={"heart is functioning normally","heart beat is rising","heart is functioning normally","heart is functioning normally but sudden rise is shown","heart is functioning normally","heart is beating fast"};
+private String[] message={"Normal Heart Beat","High Heart Beat Rate","Normal Heart Beat","High Heart Beat Rate","heart is functioning normally","High Heart Beat Rate"};
 private Context ctx;
 
     public RecyclerAdapterHeart(Context ctx) {
@@ -30,7 +30,12 @@ private Context ctx;
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
       viewHolder.report.setText(arrayList[position]);
-      viewHolder.message.setText(message[position]);
+      if(position==0){
+          viewHolder.message.setText("Resting Heart Rate");
+      }
+      else{
+          viewHolder.message.setText(message[position]);
+      }
     }
 
     @Override

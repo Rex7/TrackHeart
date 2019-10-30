@@ -36,8 +36,8 @@ public class Homepage extends AppCompatActivity {
     }
     private void setupViewPager(ViewPager viewPager) {
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new heartmeasure(this), "Heart Rate ");
-        adapter.addFragment(new heartreport(this), "Display Results");
+        adapter.addFragment(new heartmeasure(this), "Measure Heart Rate ");
+        adapter.addFragment(new heartreport(this), "History");
 
         viewPager.setAdapter(adapter);
     }

@@ -18,27 +18,112 @@
         android:id="@+id/progressBar"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        CircleProgressView:cpv_textColor="@color/colorAccent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="80dp"
         CircleProgressView:cpv_barWidth="35dp"
-        CircleProgressView:cpv_rimWidth="35dp" />
+        CircleProgressView:cpv_rimWidth="35dp"
+        CircleProgressView:cpv_textColor="@color/colorAccent" />
 
-    <TextView
-        android:id="@+id/heartMeasure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/progressBar"
+   <RelativeLayout
+       android:id="@+id/mainContent"
+       android:layout_below="@+id/progressBar"
+       android:layout_width="match_parent"
+       android:layout_height="150dp">
 
+       <android.support.v7.widget.CardView
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:layout_alignParentStart="true"
+           android:layout_centerVertical="true"
+           android:layout_marginStart="15dp">
+
+           <TextView
+               android:id="@+id/min"
+               android:layout_marginTop="25dp"
+               android:layout_gravity="center_horizontal"
+               android:layout_width="wrap_content"
+               android:textSize="30sp"
+               android:textColor="@color/colorAccent"
+               android:fontFamily="sans-serif-condensed"
+               android:layout_height="wrap_content"
+               android:text="55" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="65dp"
+              android:fontFamily="sans-serif-smallcaps"
+               android:text="min bpm"
+               android:textSize="15sp" />
+       </android.support.v7.widget.CardView>
+
+       <android.support.v7.widget.CardView
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:layout_alignParentStart="true"
+           android:layout_alignParentBottom="true"
+           android:layout_marginStart="137dp"
+           android:layout_marginBottom="25dp">
+
+           <TextView
+               android:id="@+id/current"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="25dp"
+               android:textSize="30sp"
+               android:textColor="@color/colorAccent"
+               android:layout_gravity="center_horizontal"
+               android:text="65" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="65dp"
+               android:fontFamily="sans-serif-smallcaps"
+               android:text="Avergae bpm"
+               android:textSize="15sp" />
+       </android.support.v7.widget.CardView>
+
+       <android.support.v7.widget.CardView
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:layout_alignParentEnd="true"
+           android:layout_centerVertical="true"
+           android:layout_marginEnd="27dp">
+
+           <TextView
+               android:id="@+id/max"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="25dp"
+               android:textSize="30sp"
+               android:textColor="@color/colorAccent"
+               android:layout_gravity="center_horizontal"
+               android:text="120" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="65dp"
+
+               android:fontFamily="sans-serif-smallcaps"
+               android:text="Max bpm"
+               android:textSize="15sp" />
+       </android.support.v7.widget.CardView>
+
+   </RelativeLayout>
+
+    <Button
+        android:id="@+id/panicButton"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/mainContent"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="serif-monospace"
-        android:padding="10dp"
-        android:text="@string/HeartRateMessage"
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/panic"
+        android:textColor="#f1eded" />
 
 </RelativeLayout>
