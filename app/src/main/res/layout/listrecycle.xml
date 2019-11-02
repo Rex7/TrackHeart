@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:src="@drawable/callofduty"
+            android:layout_height="150dp" />
+        <TextView
+            android:id="@+id/listTitle"
+            android:text="Call of Duty"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="50dp"
+            android:textSize="25sp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ListContent"
+            android:text="Size"
+            android:textSize="24sp"
+            android:layout_below="@+id/listTitle"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_marginLeft="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

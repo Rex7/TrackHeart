@@ -1,9 +1,8 @@
 package com.example.regischarles.fitheart.fragment;
 
-import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,9 +10,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.DecelerateInterpolator;
-import android.widget.ProgressBar;
+import android.widget.Button;
 
+import com.example.regischarles.fitheart.Demo;
 import com.example.regischarles.fitheart.R;
 
 import at.grabner.circleprogress.CircleProgressView;
@@ -22,7 +21,7 @@ import at.grabner.circleprogress.TextMode;
 @SuppressLint("ValidFragment")
 public class heartmeasure extends Fragment {
     Context ctx;
-    private ProgressBar progressBar;
+    Button panic;
     CircleProgressView mCircleView;
     public heartmeasure(Context ctx) {
     this.ctx=ctx;
@@ -39,6 +38,13 @@ public class heartmeasure extends Fragment {
 
         View view=inflater.inflate(R.layout.mainheart,container,false);
         mCircleView=view.findViewById(R.id.progressBar);
+        panic=view.findViewById(R.id.panicButton);
+        panic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ctx.getApplicationContext(),Demo.class));
+            }
+        });
         mCircleView.setMaxValue(150);
 
       mCircleView.setUnitSize(50); // if i set the text size i also have to set the unit size

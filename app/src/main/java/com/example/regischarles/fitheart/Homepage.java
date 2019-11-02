@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.widget.Button;
 
 import com.example.regischarles.fitheart.fragment.heartmeasure;
 import com.example.regischarles.fitheart.fragment.heartreport;
@@ -20,12 +21,14 @@ public class Homepage extends AppCompatActivity {
     public ViewPagerAdapter adapter;
     private TabLayout tabLayout;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         Toolbar toolbar = findViewById(R.id.toolbar);
         tabLayout=findViewById(R.id.tablayout);
+
         setSupportActionBar(toolbar);
         mViewPager = findViewById(R.id.container);
 
@@ -46,7 +49,7 @@ public class Homepage extends AppCompatActivity {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
-        public ViewPagerAdapter(FragmentManager manager) {
+         ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
 
@@ -60,7 +63,7 @@ public class Homepage extends AppCompatActivity {
             return mFragmentList.size();
         }
 
-        public void addFragment(Fragment fragment, String title) {
+         void addFragment(Fragment fragment, String title) {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }
