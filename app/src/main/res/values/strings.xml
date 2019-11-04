@@ -3,5 +3,8 @@
     <string name="heartrate">75 bpm </string>
     <string name="HeartRateMessage">Your heart is beating normally</string>
     <string name="panic">Panic</string>
+    <string name="previous">RecyclerAdapterHeart</string>
+    <string name="recommended">Recommened Apps</string>
+    <string name="cover">cover</string>
 
 </resources>

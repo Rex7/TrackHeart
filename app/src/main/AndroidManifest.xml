@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Demo"/>
+        <activity android:name=".Demo" />
+        <activity android:name=".SimpleRecyclerSwipeDemo"></activity>
     </application>
 
 </manifest>

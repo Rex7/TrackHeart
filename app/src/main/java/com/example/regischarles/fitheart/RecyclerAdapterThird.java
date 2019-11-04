@@ -12,18 +12,18 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 public class RecyclerAdapterThird extends RecyclerView.Adapter<RecyclerAdapterThird.Viewholder> {
-    Context ctx;
+  private   Context ctx;
     String[] data={"520mb","24mb","45mb","185mb","900mb"};
     String[] Name={"Tinder","Truecaller","Amazon","Amazon Prime","Happn"};
     int[] image={R.drawable.tinder,R.drawable.truecaller,R.drawable.amazon,R.drawable.prime,R.drawable.happn} ;
-    public RecyclerAdapterThird(Context ctx){
+     RecyclerAdapterThird(Context ctx){
         this.ctx=ctx;
     }
 
     @NonNull
     @Override
     public RecyclerAdapterThird.Viewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view=LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listrecycle,viewGroup,false);
+        View view=LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.ite_swipe,viewGroup,false);
         return new RecyclerAdapterThird.Viewholder(view);
     }
 
@@ -44,7 +44,7 @@ public class RecyclerAdapterThird extends RecyclerView.Adapter<RecyclerAdapterTh
     class Viewholder extends RecyclerView.ViewHolder{
 ImageView imageView;
 TextView title,content;
-        public Viewholder(@NonNull View itemView) {
+         Viewholder(@NonNull View itemView) {
             super(itemView);
             imageView=itemView.findViewById(R.id.imageView);
             title=itemView.findViewById(R.id.listTitle);
