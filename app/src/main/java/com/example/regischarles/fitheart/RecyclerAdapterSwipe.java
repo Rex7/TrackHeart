@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,6 +58,8 @@ public class RecyclerAdapterSwipe extends RecyclerView.Adapter<RecyclerAdapterSw
         }
     }
     public void removeItem(int position){
+        Log.v("SizeData","Data"+data.size());
+        Log.v("SizeData","position"+position);
         data.remove(position);
         notifyItemRemoved(position);
 
